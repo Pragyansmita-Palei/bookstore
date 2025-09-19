@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "story book",
+    "title": "A bookstore is a place where people can find and buy books they love.",
+    "price": 0,
+    "category": "free",
+    "image": "/images/book.jpg"
+  },
+  {
+    "id": 2,
+    "name": "spot book",
+    "title": "A bookstore is a place where people can find and buy books they love.",
+    "price": 20,
+    "category": "free",
+    "image": "/images/book.jpg"
+  },
+  {
+    "id": 3,
+    "name": "story book",
+    "title": "A bookstore is a place where people can find and buy books they love.",
+    "price": 0,
+    "category": "free",
+    "image": "/images/book.jpg"
+  },
+  {
+    "id": 4,
+    "name": "music book",
+    "title": "A bookstore is a place where people can find and buy books they love.",
+    "price": 0,
+    "category": "free",
+    "image": "/images/book.jpg"
+  },
+  {
+    "id": 5,
+    "name": "math book",
+    "title": "A bookstore is a place where people can find and buy books they love.",
+    "price": 0,
+    "category": "paid",
+    "image": "/images/book.jpg"
+  }
+]
