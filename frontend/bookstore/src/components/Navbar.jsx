@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Login from '../pages/login';
+import logo from "../../public/images/logo.jpg";
 
 function Navbar() {
   const navitem = (
@@ -53,7 +54,7 @@ function Navbar() {
                 {navitem}
               </ul>
             </div>
-            <a className=" font-bold text-2xl">Bookstore</a>
+            <img src={logo} alt='img'className='h-15 w-15' />
           </div>
           <div className="navbar-end space-x-3">
             <div className="navbar-center hidden lg:flex">

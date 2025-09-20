@@ -17,6 +17,8 @@ app.get("/", (req, res) => {
   return res.status(200).send("<h1>welcome to bookstore </h1>");
 });
 app.use("/api/V1/book",require("./routes/bookRoute"));
+app.use("/api/V1/user",require("./routes/userRoute"));
+
 
 //port
 const PORT = process.env.PORT || 5000;
