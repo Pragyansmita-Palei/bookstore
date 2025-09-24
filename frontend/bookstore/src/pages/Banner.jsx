@@ -3,7 +3,7 @@ import banner from "../../public/banner.jpg";
 function Banner() {
   return (
     <>
-      <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row my-10">
+<div className="max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row my-10">
         <div className="md:w-1/2 w-full md:mt-36 mt-12 order-2 md:order-1 ">
           <div className="space-y-8">
             <h1 className="text-4xl font-bold">
@@ -39,12 +39,12 @@ function Banner() {
               <div className="validator-hint hidden">
                 Enter valid email address
               </div>
-              <button className="btn btn-secondary mt-6 w-25">Secondary</button>
+              <button className="btn btn-secondary mt-6 w-25">GetStarted</button>
             </div>
           </div>
         </div>
         <div className="md:w-1/2 w-full order-1">
-          <img src={banner} className="w-92 h-92 md:mt-20 md:ml-40"></img>
+          <img src={banner} className="w-full md:w-[400px] h-auto  md:pt-0 md:mt-20 md:ml-40 pt-20" ></img>
         </div>
       </div>
     </>

@@ -4,12 +4,15 @@ function Cards({item}) {
 
   return (
     <>
-    <div className='my-4'>
-      <div className="card bg-base-100 w-80  shadow-sm hover:scale-105 dark:bg-slate-900 dark:text-white">
+    <div className='my-4 flex justify-center'>
+      <div className="card bg-base-100 w-50 lg:w-80 shadow-sm hover:scale-105 dark:bg-slate-900 dark:text-white">
   <figure>
-    <img
-      src={item.image}
-      alt="Shoes" />
+   <img
+  src={item.image}
+  alt="Shoes"
+  className="h-50 w-50 lg:h-auto lg:w-auto"
+/>
+
   </figure>
   <div className="card-body">
     <h2 className="card-title">

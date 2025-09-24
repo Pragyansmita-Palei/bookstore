@@ -8,8 +8,25 @@ body{
   font-family: "poppins",sans-serif;
 }
 @media (max-width: 768px) {
-  body {
+  html,body {
     overflow-x: hidden;
     overflow-y: auto;
   }
+}
+@media (max-width: 768px) {
+    .slick-next {
+        right: 14px !important;
+    }
+    .slick-prev {
+    left: 4px !important;
+    
+   }
+
+}
+.slick-slide {
+  padding: 0 8px; /* spacing between slides */
+}
+
+.slick-list {
+  margin: 0 -8px; /* fix overflow caused by padding */
 }

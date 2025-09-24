@@ -1,15 +1,38 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import Login from './login'
+import { Link, useNavigate  } from 'react-router-dom'
+import Login from './Login'
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import toast from 'react-hot-toast';
 
 function Signup() {
    const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
+     const navigate = useNavigate();
 
+    const onSubmit = async (data) => {
+    const userInfo = {
+      name: data.name,
+      email: data.email,
+      password: data.password,
+    };
+    await axios
+      .post("http://localhost:8080/api/V1/user/register", userInfo)
+      .then((res) => {
+        console.log(res.data);
+        if (res.data) {
+        toast.success(' signup Successfully');
+        navigate("/");
+        }
+        localStorage.setItem("Users", JSON.stringify(res.data.user));
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.error('user esxit already');
+      });
+  };
   console.log(watch("example"));
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100 relative">
+    <div className="flex justify-center items-center min-h-screen relative pr-4 pl-4">
       <div className="bg-white shadow-lg rounded-2xl p-8 w-96 relative">
         {/* Close Button */}
         <Link
@@ -32,7 +55,7 @@ function Signup() {
             <input
               type="text"
               placeholder="Enter your name"
-              className="w-full px-3 py-2 border rounded-md outline-none"
+              className="w-full px-3 py-2 border rounded-md outline-none dark:text-black"
               {...register("name", { required: true })}
             />
           {errors.name && <span className='text-red-500'>This field is required</span>}
@@ -46,7 +69,7 @@ function Signup() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="w-full px-3 py-2 border rounded-md outline-none"
+              className="w-full px-3 py-2 border rounded-md outline-none dark:text-black"
              {...register("email", { required: true })}
 
             />
@@ -61,26 +84,11 @@ function Signup() {
             <input
               type="password"
               placeholder="Enter your password"
-              className="w-full px-3 py-2 border rounded-md outline-none"
+              className="w-full px-3 py-2 border rounded-md outline-none dark:text-black"
               {...register("password", { required: true })}
 
             />
             {errors.password && <span className='text-red-500'>This field is required</span>}
-
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Confirm Password
-            </label>
-            <input
-              type="password"
-              placeholder="Confirm your password"
-              className="w-full px-3 py-2 border rounded-md outline-none"
-             {...register("password", { required: true })}
-
-            />
-                        {errors.password && <span className='text-red-500'>This field is required</span>}
 
           </div>
         </div>
