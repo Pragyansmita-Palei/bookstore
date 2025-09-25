@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import Login from '../pages/Login';
 import logo from "../../public/images/logo.jpg";
 import Logout from "../pages/Logout";
 import { useAuth } from '../Context/AuthProvider';
+import Login from '../pages/Login';
 
 function Navbar() {
   const [authUser,setAuthUser]=useAuth()

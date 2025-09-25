@@ -5,7 +5,6 @@ import Course from "./Course/Course"
 import Signups from './Signup/Signups';
 import  { Toaster } from 'react-hot-toast';
 import { useAuth } from './Context/AuthProvider';
-import Contact from './pages/Contact';
 import Contacts from './Conatct/Contacts';
 import Aboutus from './Aboutus/Aboutus';
 import Login from './pages/Login';
