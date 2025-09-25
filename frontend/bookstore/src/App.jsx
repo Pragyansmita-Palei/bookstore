@@ -3,12 +3,12 @@ import Home from './Home/Home'
 import { Navigate, Routes, Route } from "react-router-dom";
 import Course from "./Course/Course"
 import Signups from './Signup/Signups';
-import Login from './pages/Login';
 import  { Toaster } from 'react-hot-toast';
 import { useAuth } from './Context/AuthProvider';
 import Contact from './pages/Contact';
 import Contacts from './Conatct/Contacts';
 import Aboutus from './Aboutus/Aboutus';
+import Login from './pages/Login';
 
 function App() {
    const [authUser,setAuthUser]=useAuth()
