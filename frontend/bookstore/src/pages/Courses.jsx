@@ -8,7 +8,7 @@ import { useEffect } from "react";
 function Courses() {
   const[book,setbook] = useState([])
   useEffect (()=>{
-    axios.get("http://localhost:8080/api/V1/book/get")
+    axios.get(`${BASE_URL}/book/get`)
     .then(result => setbook(result.data.book))
     .catch(err =>console.log(err));
   },[]);
