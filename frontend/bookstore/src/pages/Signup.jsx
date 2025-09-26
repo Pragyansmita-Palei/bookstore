@@ -16,7 +16,7 @@ function Signup() {
       password: data.password,
     };
     await axios
-      .post(https://bookstore-ru35.onrender.com/api/user/register, userInfo)
+      .post("https://bookstore-ru35.onrender.com/api/user/register", userInfo)
       .then((res) => {
         console.log(res.data);
         if (res.data) {
