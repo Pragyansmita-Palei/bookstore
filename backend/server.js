@@ -21,6 +21,8 @@ app.use("/api/V1/user",require("./routes/userRoute"));
 
 
 //port
+const PORT = process.env.PORT || 5000;
+
 const BASE_URL = process.env.VITE_API_URL
 
 //listen  
