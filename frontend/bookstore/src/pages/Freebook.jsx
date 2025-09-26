@@ -13,7 +13,7 @@ function Freebook() {
    const [isMobile, setIsMobile] = useState(false);
 
   useEffect (()=>{
-    axios.get(https://bookstore-ru35.onrender.com/api/V1/book)
+    axios.get(https://bookstore-ru35.onrender.com/api/V1/book/get)
     .then((res)=>{
       const freebook = res.data.book.filter((book)=>book.category ==="free");
      setbook(freebook);
