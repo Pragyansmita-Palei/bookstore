@@ -21,7 +21,7 @@ app.use("/api/V1/user",require("./routes/userRoute"));
 
 
 //port
-const BASE_URL = import.meta.env.VITE_API_URL;
+const BASE_URL = process.env.VITE_API_URL
 
 //listen  
 app.listen(PORT, () => {
