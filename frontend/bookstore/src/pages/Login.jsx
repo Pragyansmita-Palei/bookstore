@@ -12,7 +12,7 @@ function Login() {
       password: data.password,
     };
     await axios
-      .post("http://localhost:8080/api/V1/user/login", userInfo)
+      .post(`${BASE_URL}/user/login`, userInfo)
       .then((res) => {
         console.log(res.data);
         if (res.data) {
