@@ -8,7 +8,7 @@ import { useEffect } from "react";
 function Courses() {
   const[book,setbook] = useState([])
   useEffect (()=>{
-    axios.get(https://bookstore-ru35.onrender.com/api/V1/book/get)
+    axios.get("https://bookstore-ru35.onrender.com/api/V1/book/get")
     .then(result => setbook(result.data.book))
     .catch(err =>console.log(err));
   },[]);
