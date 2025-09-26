@@ -13,7 +13,7 @@ function Freebook() {
    const [isMobile, setIsMobile] = useState(false);
 
   useEffect (()=>{
-    axios.get("http://localhost:8080/api/V1/book/get")
+    axios.get(`${BASE_URL}/book/get`)
     .then((res)=>{
       const freebook = res.data.book.filter((book)=>book.category ==="free");
      setbook(freebook);
